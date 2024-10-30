@@ -1,0 +1,8 @@
+mirrors:
+  registry.s8d.local:
+    endpoint:
+      - "https://registry.s8d.local"
+configs:
+  "registry.s8d.local":
+    tls:
+      ca_file:   /shared-ssl/schoonveld-ict_CA.pem

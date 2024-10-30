@@ -1,0 +1,26 @@
+[ req ]
+default_bits           = 2048
+distinguished_name     = req_distinguished_name
+prompt                 = no
+req_extensions         = v3_req
+
+[ req_distinguished_name ]
+C                      = NL
+ST                     = Groningen
+L                      = Haren
+O                      = Schoonveld-ICT
+OU                     = Development
+CN                     = s8d.local
+emailAddress           = inf0@schoonveld-ict.nl
+
+[v3_req]
+subjectKeyIdentifier = hash
+basicConstraints = critical, CA:false
+nsCertType = server
+keyUsage = digitalSignature, nonRepudiation, keyEncipherment
+extendedKeyUsage = serverAuth
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = s8d.local
+DNS.2 = registry.s8d.local
